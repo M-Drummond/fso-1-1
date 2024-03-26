@@ -1,24 +1,15 @@
-import Part  from "./Part"
+import Part from "./Part";
 
-const Content = ( props ) => {
+const Content = (course) => {
+  const parts = course.parts.parts;
 
-    
-    console.log( props )
+  return (
+    <>
+      <Part part={parts[0]} />
+      <Part part={parts[1]} />
+      <Part part={parts[2]} />
+    </>
+  );
+};
 
-
-return (      
-
-    <div>
-
-    {/* { props.part1.part } */}
-
-    <Part part={ props.part1.part } exercises={ props.part1.exercises } />
-    <Part part={ props.part2.part } exercises={ props.part2.exercises } />
-    <Part part={ props.part3.part } exercises={ props.part3.exercises } />
-
-    </div>
-
-)
-}
-
-export default Content
+export default Content;

@@ -1,12 +1,10 @@
-const Part = ( props ) => {
+const Part = (part) => {
+  const partDetails = part.part;
+  return (
+    <p>
+      {partDetails.name} - {partDetails.exercises}
+    </p>
+  );
+};
 
-
-    { console.log( props  ) }
-
-    return (
-        <p>{ props.part } - { props.exercises } </p>
-
-    )
-  }
-  
-  export default Part
+export default Part;
